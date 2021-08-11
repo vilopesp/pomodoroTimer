@@ -8,18 +8,108 @@
     <title>Programodoro</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 </head>
 <body>
-    <button onclick="minusBtn()" id="minusBtn">-</button>
-    <span id="minutes">00</span></span>:<span id="seconds">00</span>
-    <button onclick="plusBtn()" id="plusBtn">+</button>
+    <header>
+        <div class="header-content">
+            <img src="/assets/logotipo.svg" class="logotipo" alt="Logotipo">
+            
+            <div class="settings" >
+                <a href="#">
+                    <svg id="setting-svg-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                </a>
 
-    <br><br>
+            </div>
+        </div>
+    </header>
 
-    <button onclick="startCounter()">Start</button>
-    <button onclick="pauseCounter()">Pause</button>
-    <button onclick="resetCounter()">Reset</button>
+    <div class="separator-line"></div>
+
+    <main>
+
+        <div class="tab-container">
+            <div class="tab-switcher">
+                <button class="button-tab active" data="focus-tab">focus</button>
+                <button class="button-tab" data="break-tab">break</button>
+            </div>
+
+            <div class="tab-content" data-tab="focus-tab">
+                <div class="pomodoro-timer">
+                    
+                    <div class="timer-clock">
+                        <button onclick="minusBtn()" id="minusBtn">-</button>
+                        
+                        <div class="clock">
+                            <span id="minutes" class="timer">00</span>:<span class="timer" id="seconds">00</span>
+                        </div>
+
+                        <button onclick="plusBtn()" id="plusBtn">+</button>
+                    </div>
+
+                    <div class="timer-control-btns">
+                        <button onclick="startCounter()" class="btn-control" id="play-button">
+                            <svg id="play-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                            Start
+                        </button>
+    
+                        <button onclick="pauseCounter()" class="btn-control" id="pause-button">
+                            <svg id="pause-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                            </svg>
+                            Pause
+                        </button>
+                        
+                        <button onclick="resetCounter()" class="btn-control" id="reset-button">
+                            <svg id="reset-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                            </svg>
+                            
+                        </button>
+                    </div>
+                </div>        
+            </div>
+
+            <div class="tab-content-2" data-tab="break-tab">
+                <div class="pomodoro-timer">
+                    <button onclick="minusBtn()" id="minusBtn">-</button>
+                    <span id="minutes" class="timer">00</span></span>:<span class="timer" id="seconds">00</span>
+                    <button onclick="plusBtn()" id="plusBtn">+</button>
+
+                    <div class="timer-control">
+                        <button onclick="startCounter()" class="btn-control" id="play-button">
+                            <svg id="play-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
+                            Start
+                        </button>
+    
+                        <button onclick="pauseCounter()" class="btn-control" id="pause-button">
+                            <svg id="pause-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+                            </svg>
+                            Pause
+                        </button>
+                        
+                        <button onclick="resetCounter()" class="btn-control" id="reset-button">
+                            <svg id="reset-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                            </svg>
+                            Reset
+                        </button>
+                    </div>
+                </div>        
+            </div>
+        </div>    
+    
+    </main>
 
     <script src="/script.js"></script>
 

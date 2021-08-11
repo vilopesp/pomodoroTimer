@@ -57,7 +57,7 @@ function resetCounter() {
 }
 
 // TIMER CONTROL
-
+2
 function plusBtn() {
     if(minutes >= 0) {
         ++minutes

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+    --light-grey: #ffffff3d;
+    --light-grey-hover: #9472b46e;
+
+    --medium-grey: #282828;
+    --dark-grey: #1F1F1F;
+    --line-grey: #4D4D4D;
+
+    --primary-color: #7550DD;
+    --primary-hover: #5C3BBC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+a {
+	color: white;
+    font-family: Cairo, sans-serif;
+    font-weight: 600;
+}
+
+body {
+    height: 100%;
+    background: var(--medium-grey);
+}
+
+/* --- HEADER --- */
+
+header {
+    width: 100vw;
+    padding: 5rem 12rem;
+}
+
+
+.header-content {
+    height: auto;
+    display: flex;
+
+    justify-content:space-between;
+}
+
+header .header-content .logotipo {
+    max-height: 3.2rem;
+}
+
+header .header-content .settings a svg {
+    color: white;
+    height: 2.5rem;
+
+    margin-top: .5rem;
+}
+
+.separator-line {
+    border: 1px solid white;
+    opacity: 10%;
+
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* --- MAIN --- */
+main {
+    height: calc(100vh - 15rem);
+    display: flex;
+
+    justify-content: center;
+    align-items: center    
+}
+
+/* --- TAB SWITCHER --- */
+
+main .tab-container .tab-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20rem;
+    height: 4rem;
+    padding: 2rem .5rem;
+
+    border-radius: 5rem;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.1);
+
+    background: var(--dark-grey);
+}
+
+main .tab-container .tab-switcher button {
+    width: 10rem;
+    height: 3rem;
+
+    border-radius: 2rem;
+    border: none;
+    background: none;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+main .tab-container .tab-switcher button:hover {
+    color: var(--primary-hover);
+}
+
+main .tab-container .tab-switcher .button-tab.active,
+main .tab-container .tab-switcher .button-tab.active:hover {
+    background:var(--primary-color);
+    color: white;
+}
+
+/* --- POMODORO TIMER --- */
+
+.tab-content .pomodoro-timer .timer-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.tab-content .pomodoro-timer .timer-clock .clock {
+    padding: 8rem;
+    position: relative;
+    font-size: 5rem;
+
+    -webkit-clip-path: circle(40% at 40% 40%); 
+    clip-path: circle(40% at 50% 50%);
+    background: var(--dark-grey)
+}
+
+.tab-content-2 {
+    display: none;
+}
+
+.tab-content .pomodoro-timer .timer-clock button {
+    width: 5rem;
+    height: 5rem;
+
+    color: var(--dark-grey);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 1rem;
+    background: var(--light-grey);
+}
+
+.tab-content .pomodoro-timer .timer-clock button:hover {
+    background: var(--light-grey-hover);
+    cursor: pointer
+}
+
+
+/* --- TIMER CONTROLS --- */
+.timer-control-btns {
+    display: flex;
+    margin-top: 1.3rem;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-control-btns button {
+    padding: .5rem 2rem;
+    width: 10rem;
+
+    border: none;
+    color: white;
+    background: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+.btn-control + .btn-control{
+    margin-left: .6rem;
+}
