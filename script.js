@@ -49,7 +49,7 @@ function destroyInterval() {
 
 function resetCounter() {
     destroyInterval()
-
+    
     minutes = 25;
     seconds = 00; 
     updateCounterEl()
@@ -57,7 +57,7 @@ function resetCounter() {
 }
 
 // TIMER CONTROL
-2
+
 function plusBtn() {
     if(minutes >= 0) {
         ++minutes
@@ -69,5 +69,41 @@ function minusBtn() {
     if(minutes > 1) {
         --minutes
         updateCounterEl()
+    }
+}
+
+// SWITCHER BUTTONS
+const buttons = Array.from(document.getElementsByClassName('button-tab'))
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', onButtonClick)
+})
+
+function onButtonClick(event) {
+  const selectedAttribute = event.target.getAttribute('data')
+  addOrRemoveActive(selectedAttribute)
+}
+
+function addOrRemoveActive(selectedAttribute) {
+  buttons.forEach((button) => {
+    const btnAttribute = button.getAttribute('data');
+
+    if (btnAttribute === selectedAttribute) {
+      button.classList.add('selected')
+      changeTimeBreak()
+      return
+    }
+    
+        button.classList.remove('selected')
+        resetCounter()
+    })
+}
+
+function changeTimeBreak() {
+    let breakTab = document.getElementsByClassName('break-tab');
+    
+    if (breakTab[0].classList.contains('selected')) {
+        minutes = 10;
+        updateCounterEl();
     }
 }

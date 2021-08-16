@@ -33,11 +33,15 @@
 
         <div class="tab-container">
             <div class="tab-switcher">
-                <button class="button-tab active" data="focus-tab">focus</button>
-                <button class="button-tab" data="break-tab">break</button>
+
+                <!-- TABS BUTTON -->
+                <button class="button-tab selected focus-tab" data="focus-tab">focus</button>
+                <button class="button-tab break-tab" data="break-tab">break</button>
+                
             </div>
 
-            <div class="tab-content" data-tab="focus-tab">
+            <!-- TABS CONTENT -->
+            <div id="tab-content">
                 <div class="pomodoro-timer">
                     
                     <div class="timer-clock">
@@ -76,13 +80,20 @@
                 </div>        
             </div>
 
-            <div class="tab-content-2" data-tab="break-tab">
+            <!-- <div class="tab-content" aria-labelledby="break-tab" hidden>
                 <div class="pomodoro-timer">
-                    <button onclick="minusBtn()" id="minusBtn">-</button>
-                    <span id="minutes" class="timer">00</span></span>:<span class="timer" id="seconds">00</span>
-                    <button onclick="plusBtn()" id="plusBtn">+</button>
+                    
+                    <div class="timer-clock">
+                        <button onclick="minusBtn()" id="minusBtn">-</button>
+                        
+                        <div class="clock">
+                            <span id="minutes" class="timer">00</span>:<span class="timer" id="seconds">00</span>
+                        </div>
 
-                    <div class="timer-control">
+                        <button onclick="plusBtn()" id="plusBtn">+</button>
+                    </div>
+
+                    <div class="timer-control-btns">
                         <button onclick="startCounter()" class="btn-control" id="play-button">
                             <svg id="play-svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                 <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
@@ -102,12 +113,11 @@
                                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
                                 <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
                             </svg>
-                            Reset
+                            
                         </button>
                     </div>
                 </div>        
-            </div>
-        </div>    
+            </div>    -->
     
     </main>
 

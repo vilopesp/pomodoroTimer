@@ -83,6 +83,13 @@ main {
 
 /* --- TAB SWITCHER --- */
 
+main .tab-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 main .tab-container .tab-switcher {
     display: flex;
     align-items: center;
@@ -114,21 +121,22 @@ main .tab-container .tab-switcher button:hover {
     color: var(--primary-hover);
 }
 
-main .tab-container .tab-switcher .button-tab.active,
-main .tab-container .tab-switcher .button-tab.active:hover {
+main .tab-container .tab-switcher .button-tab.selected,
+main .tab-container .tab-switcher .button-tab.selected:hover {
     background:var(--primary-color);
     color: white;
 }
 
+
 /* --- POMODORO TIMER --- */
 
-.tab-content .pomodoro-timer .timer-clock {
+#tab-content .pomodoro-timer .timer-clock {
     display: flex;
     align-items: center;
     justify-content: center
 }
 
-.tab-content .pomodoro-timer .timer-clock .clock {
+#tab-content .pomodoro-timer .timer-clock .clock {
     padding: 8rem;
     position: relative;
     font-size: 5rem;
@@ -138,11 +146,11 @@ main .tab-container .tab-switcher .button-tab.active:hover {
     background: var(--dark-grey)
 }
 
-.tab-content-2 {
+#tab-content-2 {
     display: none;
 }
 
-.tab-content .pomodoro-timer .timer-clock button {
+#tab-content .pomodoro-timer .timer-clock button {
     width: 5rem;
     height: 5rem;
 
@@ -160,7 +168,7 @@ main .tab-container .tab-switcher .button-tab.active:hover {
     background: var(--light-grey);
 }
 
-.tab-content .pomodoro-timer .timer-clock button:hover {
+#tab-content .pomodoro-timer .timer-clock button:hover {
     background: var(--light-grey-hover);
     cursor: pointer
 }
