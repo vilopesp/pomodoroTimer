@@ -56,21 +56,20 @@ function resetCounter() {
 
 }
 
-// TIMER CONTROL
-
 function plusBtn() {
     if(minutes >= 0) {
-        ++minutes
+        minutes = minutes + 1
         updateCounterEl()
     }
 }
 
 function minusBtn() {
-    if(minutes > 1) {
-        --minutes
+    if(minutes >= 0) {
+        minutes = minutes - 1
         updateCounterEl()
     }
 }
+
 
 // SWITCHER BUTTONS
 const buttons = Array.from(document.getElementsByClassName('button-tab'))
@@ -107,3 +106,13 @@ function changeTimeBreak() {
         updateCounterEl();
     }
 }
+
+
+
+
+
+
+
+
+
+
