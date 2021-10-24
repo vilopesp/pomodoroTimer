@@ -186,8 +186,8 @@ main .tab-container .tab-switcher .button-tab.selected:hover {
 }
 
 .timer-control-btns button {
-    width: 8rem;
-    height: 6rem;
+    width: 10rem;
+    height: 4rem;
 
     border: none;
     color: white;
@@ -204,6 +204,12 @@ main .tab-container .tab-switcher .button-tab.selected:hover {
     cursor: pointer;
     transition: .6s ease;
 }
+
+.timer-control-btns #reset-button {
+    width: 5rem;
+    height: 4rem;
+}
+
 
 .btn-control:hover {
     background: var(--primary-hover);
