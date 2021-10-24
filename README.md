@@ -1,8 +1,5 @@
-<h1 align="center">
-    <img alt="logotipo readme" src="assets/logotipo.svg">
-</h1>
+<p align="center"><img alt="logotipo readme" src="assets/logotipo.svg"></p>
 
-<br>
 ## :computer: Projeto
 Projeto desenvolvido junto com o curso FrontStart da Isadora Stangarlin. No curso é ensinado a base teórica da lógica de um pomodoro, como o timer, o play e o pause. O design foi desenvolvido por conta própria, incluindo outras funções, como o switcher para o modo "focus" e "break".
 
